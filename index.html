@@ -1,37 +1,245 @@
 
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Happy Birthday Eagleclaw</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HILLJACK - Degens Unite</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
   <style>
-    body {
+    * { box-sizing: border-box; }
+    html, body {
       margin: 0;
       padding: 0;
-      background: url('birthday.jpg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: 'Bangers', cursive;
+      scroll-behavior: smooth;
+      background: linear-gradient(-45deg, #1c1c1c, #111, #222, #111);
+      background-size: 400% 400%;
+      animation: bgmove 15s ease infinite;
+      color: #fdfdfd;
+    }
+    @keyframes bgmove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background: #000000cc;
+      padding: 1rem 1rem 1rem;
+      box-shadow: 0 0 20px #ff6600;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      position: relative;
+      flex-wrap: wrap;
+    }
+    .nav-left, .nav-right {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+    .nav-left {
+      left: 0.25rem;
+      top: 1.5rem;
+    }
+    .nav-right {
+      right: 0.25rem;
+      top: 1.5rem;
+    }
+    .nav-left a, .nav-right a {
+      background: #ff3300;
+      color: white;
+      padding: 0.3rem 0.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      box-shadow: 0 0 8px #ff6600aa;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      text-align: center;
+      min-width: 80px;
+    }
+    .nav-left a:hover, .nav-right a:hover {
+      transform: scale(1.1);
+    }
+    .header-center {
+      margin-top: 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      color: white;
+      margin-left: -0.75rem;
+    }
+    .header-center h1 {
+      font-size: 4.2rem;
+      color: #ff9900;
       text-shadow: 2px 2px 5px #000;
-      font-size: 3rem;
+      margin: 0 0 0.75rem;
       text-align: center;
     }
-    img {
-      margin-top: 20px;
+    .ca-copy {
+      text-align: center;
+      width: 100%;
+    }
+    .ca-copy button {
+      background: #ff3300;
+      color: white;
+      padding: 0.4rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      box-shadow: 0 0 10px #ff6600aa;
+      cursor: pointer;
+      max-width: 100%;
+    }
+    .ca-copy button:hover {
+      transform: scale(1.05);
+    }
+    section {
+      padding: 1rem 1rem 1rem;
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: -0.5rem auto 0 auto;
+    }
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 16px;
+      border: 4px solid #ff6600;
+      box-shadow: 0 0 15px #ff6600aa;
+    }
+    .gallery-item:first-child img {
+      border-radius: 50%;
+    }
+    .quote {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #ffcc00;
+      text-shadow: 1px 1px 3px #000;
       max-width: 90%;
-      border: 5px solid white;
-      border-radius: 12px;
-      box-shadow: 0 0 10px #000;
+    }
+    .tokenomics {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+    }
+    .tokenomics h2 {
+      font-size: 2.5rem;
+      color: #ff9900;
+      text-shadow: 2px 2px 5px #000;
+    }
+    .tokenomics p {
+      font-size: 1.3rem;
+      margin: 0.5rem 0;
+    }
+    .tokenomics a {
+      color: #ffcc00;
+      text-decoration: underline;
+    }
+    footer {
+      padding: 2rem;
+      background-color: #000;
+      font-size: 1rem;
+      color: #999;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  HAPPY BIRTHDAY<br>EAGLECLAW!!!
-  <img src="eagleclaw.jpg" alt="Eagleclaw with fish">
+  <header>
+    <div class="nav-left">
+      <a href="https://x.com/REALHILLJACK" target="_blank">🐦 X</a>
+      <a href="#" target="_blank">💰 Buy</a>
+    </div>
+    <div class="header-center">
+      <h1>HILLJACK</h1>
+      <div class="ca-copy">
+        <button onclick="copyCA()">📋 1234abcd5678efgh9012ijkl3456mnop7890qrst</button>
+      </div>
+    </div>
+    <div class="nav-right">
+      <a href="https://t.me/realhilljack" target="_blank">📣 Telegram</a>
+      <a href="#" target="_blank">📈 Chart</a>
+    </div>
+  </header>
+  <section>
+    <p style="margin-top: 0.5rem;">
+      The official memecoin of moonshine, mullets, and mischief. Built for degenerates with heart. $HJACK
+    </p>
+  </section>
+  <section class="gallery" style="margin-top: -0.5rem;">
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021332.png" alt="Hilljack 1" />
+      <div class="quote">One tooth. One goal. One coin to rule 'em all. This is the face of the future.</div>
+    </div>
+  </section>
+  <section class="tokenomics">
+    <h2>TOKENOMICS</h2>
+    <p>Total Supply: <strong>694,200,000</strong></p>
+    <p>Fair Launch</p>
+    <p>0% Tax</p>
+    <p>95% Liquidity Locked for 12 Months (<a href="https://smithi.io/token-vesting-panel/hjack-lp-lock" target="_blank">View Lock</a>)</p>
+    <p>5% Allocated to Building the Project</p>
+    <p>100% Community Owned</p>
+    <p>No Presale</p>
+  </section>
+  <section class="gallery">
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021335.png" alt="Hilljack 2" />
+      <div class="quote">“Ain’t nothin’ stronger than Hilljack loyalty — except maybe that moonshine batch from ‘96.”</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021336.png" alt="Hilljack 3" />
+      <div class="quote">“Buy the dip? I AM the dip. Hilljackin' straight to Valhalla.”</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021337.png" alt="Hilljack 4" />
+      <div class="quote">“Some chase Lambo dreams. We chase raccoons off the porch — then buy more HILL.”</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021338.jpg" alt="Hilljack 5" />
+      <div class="quote">“My wallet’s emptier than my cousin’s GED score, but I’m still all in.”</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021339.jpg" alt="Hilljack 6" />
+      <div class="quote">“Other coins go to the moon. Hilljack shoots past it with a bottle rocket taped to a lawn chair.”</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021340.jpg" alt="Hilljack 7" />
+      <div class="quote">“They said we couldn’t launch a memecoin. So we did. While barefoot. In the rain.”</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021344.png" alt="Hilljack 8" />
+      <div class="quote">“We don’t read charts — we read gut feelings and chicken scratch from Uncle Earl.”</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021346.jpg" alt="Hilljack 9" />
+      <div class="quote">“If you ain’t buyin’ HILL, you probably butter your cornbread with a spoon.”</div>
+    </div>
+  </section>
+  <footer>
+    © 2025 Hilljack Coin. All rights reserved. Built by moonshine and a computer.
+  </footer>
+  <script>
+    function copyCA() {
+      const ca = "1234abcd5678efgh9012ijkl3456mnop7890qrst";
+      navigator.clipboard.writeText(ca).then(() => {
+        alert("Copied Contract Address: " + ca);
+      });
+    }
+  </script>
 </body>
 </html>
